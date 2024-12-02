@@ -33,10 +33,19 @@ def calculate_total_distance(diff_list):
         total_distance += diff_list[i]
     return total_distance
 
+# TODO: Calculate similarity between score
+def calculate_similarity(list_a, list_b):
+    similarity_score = 0
+    for i in range(len(list_a)):
+        similarity_score += (int(list_a[i] * list_b.count(list_a[i])))
+    return similarity_score
+
 if __name__ == '__main__':
     list_a, list_b = load_data('./input.txt')
     list_a, list_b = sort_lists(list_a, list_b)
 
     diff_list = calculate_new_diff_list(list_a, list_b)
-    
+
     print(calculate_total_distance(diff_list))
+
+    print(calculate_similarity(list_a, list_b))
