@@ -56,15 +56,7 @@ def count_safe_reports(input_file):
 
 if __name__ == '__main__':
     input_file = './input.txt'
-    print(is_ascending(['9', '7', '6', '2', '1']))
-    print(is_descending(['9', '7', '6', '2', '1']))
-    print(adjacent_diff(['9', '7', '6', '2', '1']))
-    # print(count_safe_reports(input_file))
-
-# ['7', '6', '4', '2', '1'],: Safe without removing any level.
-#  ['1', '2', '7', '8', '9'],: Unsafe regardless of which level is removed.
-#  ['9', '7', '6', '2', '1'],: Unsafe regardless of which level is removed.
-#  ['1', '3', '2', '4', '5'],: Safe by removing the second level, 3.
-  #  0    1    2    3    4    len 5
-#  ['8', '6', '4', '4', '1'],: Safe by removing the third level, 4.
-#  ['1', '3', '6', '7', '9']: Safe without removing any level.
+    # print(is_ascending(['9', '7', '6', '2', '1']))
+    # print(is_descending(['9', '7', '6', '2', '1']))
+    # print(adjacent_diff(['9', '7', '6', '2', '1']))
+    print(count_safe_reports(input_file))
