@@ -13,7 +13,7 @@ def columns_to_lists(grid_data):
     #  ('b', 'f', 'd', 'l'),
     #  ('a', 'o', 'a', 'o'),
     #  ('r', 'o', 'q', 'c')]
-    return list(zip(*grid_data))
+    return [list(column) for column in zip(*grid_data)]
 
 
 def reverse_list(list_to_revert):
@@ -140,10 +140,12 @@ def search_for_string(list_data):
         row_as_string = join_list(row)
     #   search text, update counter if needed, else move on
         matches = re.findall(search_pattern, row_as_string)
+        # print(matches)
         for m in matches:
             counter += 1
-        
+
         reverse_matches = re.findall(search_pattern_reversed, row_as_string)
+        # print(reverse_matches)
         for r in reverse_matches:
             counter += 1
     
@@ -151,7 +153,8 @@ def search_for_string(list_data):
 
 def main():
     input_file = './input.txt'
-    matrix_data = []
+    # input_file = './input_text_18_occ.txt' 
+    matrix_data = []   
     main_count = 0
     with open(input_file, 'r') as f:
         matrix_data = transform_input_to_matrix(f)
