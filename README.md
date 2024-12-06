@@ -8,4 +8,3 @@
 
 ### List of days I couldn't do; for follow up later:
 - Day02, part 2
-- Day04, part 1/2. Test case part 1 works but not big input data. fml.
