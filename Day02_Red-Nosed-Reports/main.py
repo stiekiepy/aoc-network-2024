@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
 
-
-# The levels are either all increasing or all decreasing.
-# Any two adjacent levels differ by at least one and at most three.
-
-
-"""62 65 67 70 73 76 75
-68 71 73 76 78 78
-77 80 81 82 86
-44 47 48 51 53 58"""
-
 def is_ascending(levels):
     is_true = True
     for i in range(len(levels)-1):
@@ -60,3 +50,12 @@ if __name__ == '__main__':
     # print(is_descending(['9', '7', '6', '2', '1']))
     # print(adjacent_diff(['9', '7', '6', '2', '1']))
     print(count_safe_reports(input_file))
+
+"""
+assert is_safe([7, 6, 4, 2, 1]) == 42, "Safe because the levels are all decreasing by 1 or 2."
+assert is_safe([1, 2, 7, 8, 9]) == False, "Unsafe because 2 7 is an increase of 5."
+assert is_safe([9, 7, 6, 2, 1]) == False, "Unsafe because 6 2 is a decrease of 4."
+assert is_safe([1, 3, 2, 4, 5]) == False, "Unsafe because 1 3 is increasing but 3 2 is decreasing."
+assert is_safe([8, 6, 4, 4, 1]) == False, "Unsafe because 4 4 is neither an increase or a decrease."
+assert is_safe([1, 3, 6, 7, 9]) == True, "Safe because the levels are all increasing by 1, 2, or 3."
+"""
