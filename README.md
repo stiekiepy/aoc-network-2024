@@ -8,3 +8,4 @@
 
 ### List of days I couldn't do; for follow up later:
 - Day02, part 2
+- Day04, part 2
